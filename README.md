@@ -115,7 +115,7 @@ Consider an Uber like app, where passengers requests trips and the nearest avail
 1. Request Trip Action:
 
 ```ruby
-class RequestTrip
+class RequestTrip < ApplicationAction
   attr_accessor :passenger, :pickup_address, :destination_address
 
   validate :passenger_is_not_blocked
