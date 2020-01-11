@@ -1,3 +1,3 @@
-module ApplicationAction
+class ApplicationAction
   VERSION = '0.1.0'
 end

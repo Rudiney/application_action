@@ -9,15 +9,15 @@ Gem::Specification.new do |spec|
   spec.version     = ApplicationAction::VERSION
   spec.authors     = ["Rudiney Altair Franceschi"]
   spec.email       = ["rudi.atp@gmail.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of ApplicationAction."
-  spec.description = "TODO: Description of ApplicationAction."
+  spec.homepage    = "https://github.com/Rudiney/application_action"
+  spec.summary     = "Adds the 'Actions' concept to your Rails APP"
+  spec.description = "The 'Actions' concept can help you move logic out from Controllers & Models"
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata["allowed_push_host"] = "https://rubygems.org"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -25,7 +25,8 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 6.0.2", ">= 6.0.2.1"
+  spec.add_dependency "rails", ">= 5.2", "< 7"
 
   spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency "pry"
 end
