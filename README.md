@@ -104,13 +104,13 @@ Same here. Controller already handle request params and formats, response codes 
 
 `Action`s should have heavy validations to make sure everything is ok before running. `Action`s are atomic, so you can't have half of it done. This will help with your database (and the whole app) consistency.
 
-They should be well tested and you should be able to test every scenario without an integration test. You can unit test every `Action` validation and every changes it makes when it runs.
+They should be well tested and you should be able to test every scenario without an integration test. You can unit test every `Action` validation and every change it makes when it runs.
 
 ### A Practical Example
 
 #### UberLike Logic
 
-Consider an Uber style app logic, where passengers requests trips and the nearest available driver is found. The driver can refuse the invite so the next driver should be invited. Driver also have a 1 minute timeout to respond the invitation, otherwise the invite expires and the next driver is invited. You can have some _DRY_ `Action`s like these:
+Consider an Uber like app, where passengers requests trips and the nearest available driver is found. The driver can refuse the invite so the next driver should be invited. Driver also have a 1 minute timeout to respond the invitation, otherwise the invite expires and the next driver is invited. You can have some _DRY_ `Action`s like these:
 
 1. Request Trip Action:
 
