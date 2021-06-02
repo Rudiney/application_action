@@ -6,6 +6,8 @@ class ApplicationAction
 
     ApplicationRecord.transaction { run }
 
+    after_run
+
     return true
   end
 
@@ -16,4 +18,6 @@ class ApplicationAction
   def run
     raise 'You should write your own #run method'
   end
+
+  def after_run; end
 end

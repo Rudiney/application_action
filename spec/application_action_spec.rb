@@ -52,4 +52,31 @@ RSpec.describe ApplicationAction do
       expect { action.save! }.to raise_error(RuntimeError)
     end
   end
+
+  describe 'after_run' do
+    class AfterRunDummyAction < ApplicationAction
+      attr_accessor :name
+      attr_reader :after_ran
+
+      def run; end
+
+      def after_run
+        @after_run = true
+      end
+
+      def after_ran?
+        @after_run.present?
+      end
+    end
+
+    it 'run after the run' do
+      action = AfterRunDummyAction.new(name: 'foo')
+      expect(action.after_ran?).to be false
+
+      expect(action).to be_valid
+      action.save!
+
+      expect(action.after_ran?).to be true
+    end
+  end
 end
