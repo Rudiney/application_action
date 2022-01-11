@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    application_action (1.0.0.beta2)
+    application_action (1.0.0)
       rails (>= 5.2)
 
 GEM
