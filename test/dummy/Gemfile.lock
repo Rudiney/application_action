@@ -109,7 +109,9 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.0-arm64-darwin)
       racc (~> 1.4)
-    puma (5.5.2)
+    nokogiri (1.13.0-x86_64-linux)
+      racc (~> 1.4)
+    puma (5.6.4)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
@@ -157,10 +159,11 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   debug
-  puma (~> 5.0)
+  puma (~> 5.6)
   rails (~> 7.0.1)
   sqlite3 (~> 1.4)
   tzinfo-data
